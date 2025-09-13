@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🍽️ MHT Restaurant Landing Page
 
-## Getting Started
 
-First, run the development server:
+![App Screenshot](./public/screenshot.png)
 
+---
+
+## 🚀 Overview
+
+A modern and responsive **restaurant landing page** built with **Next.js 15**, **Tailwind CSS**, and **shadcn/ui**.  
+This project is designed to provide a digital-first restaurant experience with features like QR code menu access and online table reservations.
+
+---
+
+## 🚀 Features
+
+- 📱 **Responsive design** for desktop, tablet, and mobile  
+- 🧭 **Navigation bar** with smooth scrolling  
+- 🎨 **Modern UI** built with Tailwind CSS & shadcn/ui  
+- 🍕 **Dynamic Menu Section** with QR code access  
+- 📍 **Google Maps integration** for restaurant location  
+- 📝 **Reservation form** with email notifications (Nodemailer + Gmail SMTP)  
+- 💡 **Toast notifications** for better UX  
+
+---
+
+## 🛠️ Tech Stack
+
+- [Next.js 15](https://nextjs.org/) – React framework  
+- [Tailwind CSS](https://tailwindcss.com/) – Utility-first CSS  
+- [shadcn/ui](https://ui.shadcn.com/) – UI components  
+- [Nodemailer](https://nodemailer.com/) – Email sending  
+- [TypeScript](https://www.typescriptlang.org/) – Type safety  
+
+---
+
+## 📂 Project Structure
+
+app/
+├── api/ # API routes (reservation endpoint)
+├── assets/ # Images & icons
+├── components/ # Reusable UI components
+├── layout.tsx # Root layout
+├── page.tsx # Landing page
+└── globals.css # Global styles
+
+yaml
+Copier le code
+
+---
+
+## ⚡ Getting Started
+
+### 1️⃣ Clone the repo
 ```bash
+git clone https://github.com/MHTech229/mht-restaurant-landing-page-001.git
+cd mht-restaurant-landing-page-001
+2️⃣ Install dependencies
+bash
+Copier le code
+npm install
+3️⃣ Configure environment variables
+Create a .env.local file at the root of the project:
+
+env
+Copier le code
+SMTP_HOST="smtp.gmail.com"
+SMTP_PORT="587"
+SMTP_SECURE=false
+SMTP_USER="your-email@gmail.com"
+SMTP_PASS="your-app-password"
+FROM_EMAIL="your-email@gmail.com"
+TO_EMAIL="receiver@example.com"
+⚠️ For Gmail, you must create an App Password instead of using your normal password.
+Guide: Gmail App Passwords
+
+4️⃣ Run the development server
+bash
+Copier le code
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Then open http://localhost:3000 🚀
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+📧 Reservation Emails
+When a user submits the reservation form, an email is sent to the configured TO_EMAIL.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Emails are sent using Nodemailer with Gmail SMTP.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+📸 Screenshots
+Add here a screenshot of your landing page (hero section, menu, reservation form, etc.)
 
-## Learn More
+📜 License
+This project is licensed under the MIT License.
+See the LICENSE file for more details.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+👨‍💻 Author
+MEHINTO Charbel (@MHTech229)
+Web Developer | Fullstack (React, Vue, NestJS) | Based in Benin
