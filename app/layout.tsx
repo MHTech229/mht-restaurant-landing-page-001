@@ -2,6 +2,7 @@ import React from "react";
 import { Poppins, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
+import { Analytics } from "@vercel/analytics/next";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -30,6 +31,7 @@ export default function RootLayout({
       <body className={`${poppins.variable} ${playfair.variable}`}>
         <main>{children}</main>
         <Toaster richColors position="top-right" />
+        <Analytics />
       </body>
     </html>
   );
